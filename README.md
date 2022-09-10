@@ -91,3 +91,13 @@ The starting position of a rat which is stuck in a maze is given as (0, 0), whic
       return sol;
   }
   ```
+  
+  ### Time complexity ###
+  
+  There are four possible calls from each cell. There worst case time-complexity will be:
+  **O(4<sup>n x n</sup>)** = **O(4<sup>n<sup>2</sup></sup>)**
+  
+  
+  ### Space complexity ###
+  
+  **O(n<sup>2</sup>)**
