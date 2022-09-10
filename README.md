@@ -8,25 +8,34 @@ The starting position of a rat which is stuck in a maze is given as (0, 0), whic
 ### Algorithm: 
 
 **Auxillary methods**
+<ul>
+<li> <em>isSafe( )</em> &rarr; method to determine whether a particular cell can be visited or not
+             <br/>&emsp;&emsp;&emsp;&ensp;&nbsp;A cell can only be visited if it is in-bounds of the the array <strong>((row >= 0 and row < n - 1) and (column >= 0 and column < n))</strong>,
+                     the <strong>cell of the maze does not contains 0</strong> and the cell is <strong>not previously visited</strong>. </li>
 
-*isSafe( )* &rarr; method to determine whether a particular cell can be visited or not
-             <br/> A cell can only be visited if it is in-bounds of the the array __((row >= 0 and row < n - 1) and (column >= 0 and column < n))__,
-                     the __cell of the maze does not contains 0__ and the cell is __not previously visited__.
+<li> <em>solve( )</em> &rarr; method to tarverse the maze recursively in all the four possible directions and add the solution paths to the ArrayList
+             <br/>&emsp;&emsp;&emsp;&ensp;&nbsp;Base case - when <strong>row = n - 1 and column = n - 1</strong>, we add the path to the ArrayList and return </li>
+</ul>
 
-*solve( )* &rarr; method to tarverse the maze recursively in all the four possible directions and add the solution paths to the ArrayList
-             <br/>Base case - when __row = n - 1 and column = n - 1__, we add the path to the ArrayList and return
-
-
-
-Step 1 - Declare the base case <br/>
-Step 2 - Mark the current row and column a visited <br/>
-Step 3 - recursively call the function for all the four possible directions, if isSafe(next cell) = true
-         while calling the functions recursively, pass in the path with the respective direction appended to it <br/>
-Step 4 - 
- 
+  *solve( )*<br/>
+  Step 1 - Declare the base case <br/>
+  Step 2 - Mark the current row and column a visited <br/>
+  Step 3 - Recursively call the function for all the four possible directions, if isSafe(next cell) = true<br/>
+           &emsp;&emsp;&emsp;&ensp;&nbsp;while calling the functions recursively, pass in the path with the respective direction appended to it <br/>
+  Step 4 - At the end we mark visited[row][column] = false when backtracking so that other valid function calls can reuse the path<br/>
+  
+  *findPath( )* <br/>
+  Step 1 - Declare an ArrayList <br/>
+  Step 2 - if the starting cell is '0' then return the empty list <br/>
+  Step 3 - else declare an empty string 'path' and a 2D boolean array 'visited' to keep track of the path and the visited cell respectively <br/>
+  Step 4 - initialize all the positions of the 'visited' array to false <br/>
+  Step 5 - Call the method solve and pass the original maze 2D array, its size, the initial starting cell (0, 0), the 'path' empty string, the 'visited' 2D array and the list to store the answer <br/>
+  Step 6 - Finally, return the list <br/>
+  
+  
 ---
 
-JAVA logic to solve the "Rat In A Maze" problem using Backtracking
+### JAVA logic to solve the "Rat In A Maze" problem using Backtracking
 
 
 
