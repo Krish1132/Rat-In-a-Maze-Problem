@@ -5,7 +5,7 @@ The starting position of a rat which is stuck in a maze is given as (0, 0), whic
 
 ---
 
-### Algorithm: 
+### Algorithm -
 
 **Auxillary methods**
 <ul>
@@ -35,7 +35,7 @@ The starting position of a rat which is stuck in a maze is given as (0, 0), whic
   
 ---
 
-### JAVA logic to solve the "Rat In A Maze" problem using Backtracking
+### JAVA logic to solve the "Rat In A Maze" problem using Backtracking -
 
 
 
@@ -92,12 +92,12 @@ The starting position of a rat which is stuck in a maze is given as (0, 0), whic
   }
   ```
   
-  ### Time complexity ###
+  ### Time complexity - ###
   
   There are four possible calls from each cell. There worst case time-complexity will be:
   **O(4<sup>n x n</sup>)** = **O(4<sup>n<sup>2</sup></sup>)**
   
   
-  ### Space complexity ###
+  ### Space complexity - ###
   
   **O(n<sup>2</sup>)**
